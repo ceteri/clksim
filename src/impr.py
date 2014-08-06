@@ -44,14 +44,10 @@ class Campaign (object):
 def load_campaigns (file_name):
     with open(file_name, "r") as f:
         camp_vect = []
-        count = 0
 
         for line in f:
-            if count > 0:
-                (campaign_id, network, rate_metric, rate_amount, keyword, min_lat) = line.strip().split("\t")
-                camp_vect.append(Campaign(campaign_id, network, rate_metric, rate_amount, keyword, min_lat))
-
-            count += 1
+            (campaign_id, network, rate_metric, rate_amount, keyword, min_lat) = line.strip().split("\t")
+            camp_vect.append(Campaign(campaign_id, network, rate_metric, rate_amount, keyword, min_lat))
 
     return camp_vect
 
