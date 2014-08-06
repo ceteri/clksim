@@ -58,7 +58,7 @@ The product recommender aspects are rather light -- that part could be embellish
     ./src/impr.py dat/campaign.tsv 10000000 | sort > impression.tsv
 
     # click-through
-   #  date, cookie, landing_page
+    #  date, cookie, landing_page
     ./src/clik.py impression.tsv | sort > clicks.tsv
 
     # customer registrations
